@@ -1,0 +1,13 @@
+
+
+        <h1><%= @user.name %></h1>
+        <h2><%= @user.full_name %></h2>
+        <h2><%= @user.events.name %></h2>
+  <div class="col-md-8">
+    <% if @user.events.any? %>
+      <h3>Events (<%= @user.events.count %>)</h3>
+      <ol class="microposts">
+        <%= render @events %>
+      </ol>
+    <% end %>
+

@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="well col-md-3" id="date_field">
+        <h3><%= event.date %></h3>
+    </div>
+    <div class="well col-md-8" id="event_name_field">
+        <h2><%= event.name</h2>
+        <p>Posted <%= time_ago_in_words(event.created_at) %> ago.</p>
+        <p><%= link_to event.user.name, event.user %></p>
+    </div>
+    <div class="well col-md-1" id="edit_delete">
+        Edit
+        Delete
+    </div>
+</div>
